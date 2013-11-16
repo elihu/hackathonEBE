@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="navbar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,14 +47,14 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           	
-          	<li> <a class="navbar-brand" href="#">Acércate</a></li>
-            <li class="active"><a href="#">Componer</a></li>
-            <li><a href="#">Cartas</a></li>
+          	<li> <a class="navbar-brand" href="portada.html">Acércate</a></li>
+            <li><a class="navbar-brand" href="componer.html">Componer</a></li>
+            <li><a class="navbar-brand" href="cartas.html">Cartas</a></li>
             
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+              <a class="navbar-brand" href="configuracion.html" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Perfil</a></li>
+                <li><a href="configuracion.html">Perfil</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                <!-- <li class="divider"></li>
@@ -67,6 +68,7 @@
             
             <li><a href="#">Foro</a></li>
             <li><a href="#">Mapa</a></li>
+            <li><a class="btn btn-warning" href="index.html">Cerrar Sesión</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -77,19 +79,49 @@
     		<a class="navbar-brand" href="#"><img src="img/carta.png"></a>
       	</div>
       	<div class="col-sm-6">
-        <h1>Acércate</h1>
-        <p>Apadrinar es una forma sencilla y eficaz de aportar nuestro granito de arena a este mundo maltratado por la humanidad.</p>
-        <p>
-        <p>Para contribuir a la causa presentamos nuestra pequeña aportación, con intención de hacer del apadrinamiento una experiencia constructiva, cotidiana, divertida y fácil.</p>
+        <h1>¿Qué hay de nuevo?</h1>
+        <div class="input-group">
+				
+				<div class="input-group">
+					<span class="input-group-addon">¿Cómo estás?</span>
+					<span class="label label-warning">Explique en pocas palabras su estado de ánimo a la hora de escribir a su niño apadrinado</span>
+					<input type="textarea" class="form-control " data-toggle="tooltip" title= "Explique en pocas palabras su estado de ánimo a la hora de escribir a su niño apadrinado">
+				</div>
+				
+				<div class="input-group">
+					<span class="input-group-addon">¿Qué has hecho hoy?</span>
+					<span class="label label-warning">Explique en pocas palabras qué actividades puede contarle a su niño apadrinado</span>
+					<input type="text" class="form-control" data-toggle="tooltip" title="Explique en pocas palabras qué actividades puede contarle a su niño apadrinado">
+				</div>
+				
+				<div class="input-group">
+					<span class="input-group-addon">¿Qué quieres contar?</span>
+					<span class="label label-warning">Cuente a su niño apadrinado una anécdota y/o experiencia de hoy</span>
+					<input type="text" class="form-control" data-toggle="tooltip" title="Cuente a su niño apadrinado una anécdota y/o experiencia de hoy">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">
+					<input type="checkbox"> opcion1
+					</span>
+					<span class="input-group-addon">
+					<input type="checkbox"> opcion2
+					</span>
+					<span class="input-group-addon">
+					<input type="checkbox"> opcion3
+					</span>
+				</div><!-- /input-group -->
+				<div class="input-group">
+				<span class="input-group-addon">Añadir foto</span>
+				<button type="submit" class="btn btn-lg btn-warning">Examinar</button>
+				</div>
+				<div class="input-group">
+				<span class="input-group-addon">Añadir vídeo</span>
+				<button type="submit" class="btn btn-lg btn-warning">Examinar</button>
+				</div>
+				<a href="componer.html" class="btn btn-lg btn-warning">Enviar</a>
+				
 
-
-			<h2>Objetivos</h2>
-			<ul>
-				<li>Dotar al proceso de apadrinamiento de tecnología útil y eficaz….</li>
-				<li>Disponer de sistemas de seguimiento para la mejora de la gestión del proceso de comunicación entre padrinos y apadrinados</li>
-				<li>Disponer de un sistema tecnológico cercano, útil, eficaz y asequible.</li>
-				<li>Mejorar la formación de padrinos y la comunicación con sus apadrinados</li>
-			</ul>
+			
       </div>
 		</div>
     </div> <!-- /container -->
