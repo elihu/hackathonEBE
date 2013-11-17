@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <title>Composición</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+	 <link href="css/style.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script>
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+</script>
+
+<style type="text/css">
+#div1 {width:350px;height:350px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+<div style="background-image:url(img/img_2.png); background-repeat:no-repeat; height: 160px; width:100%;"></div>
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          	
+          	<li> <a class="navbar-brand" href="portada.html">Acércate</a></li>
+            <li><a class="navbar-brand" href="componer.html">Componer</a></li>
+            <li><a class="navbar-brand" href="cartas.html">Cartas</a></li>
+            
+            <li class="dropdown">
+              <a class="navbar-brand" href="configuracion.html" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="configuracion.html">Perfil</a></li>
+                <li><a href="#">Another actions....</a></li>
+               <!-- <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>-->
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li><a class="navbar-brand" href="mapa.html">Mapa</a></li>
+		   <li><a class="navbar-brand" href="foro.html">Pregunta</a></li>
+            <li><a class="btn btn-warning" href="index.html">Cerrar Sesión</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+
+      <!-- Main component  -->
+      <div class="row">
+		   <div class="col-sm-2"></div>
+		   <div class="col-sm-8">
+				<h1> Componer </h1>
+				<p>En ésta sección podremos componer nuestra carta con nuestras aportaciones diarias</p>
+				<br>
+				<div class="input-group">
+				<span class="input-group-addon">Envía tu composición</span>
+						<button type="submit" class="btn btn-lg btn-warning">-&gt; Enviar</button>
+				</div>
+			</div>
+		   <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row">
+      	<div class="col-sm-2"></div>
+   		<div class="col-sm-8">
+   			<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+					<input type="text" class="form-control" placeholder="Buscar Contenido">
+					</div>
+					<button type="submit" class="btn btn-default">Buscar</button>
+				</form>
+		   	<!-- Single button -->
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					 Tipo de contenido <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					 <li><a href="#">Texto</a></li>
+					 <li><a href="#">Imagen</a></li>
+					 <li><a href="#">Video</a></li>
+				  </ul>
+				</div>
+				<button type="submit" class="btn btn-default">Ordenar por fecha</button>	
+				<input type="checkbox"> Solo novedades
+			</form>
+			</div>
+      	<div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+      	<div class="col-sm-2"></div>
+      	<div class="col-sm-4">
+      		
+    		<h2>Composición</h2>
+    		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    		
+      	</div>
+      	<div class="col-sm-4">
+      	
+		     <h2>Componentes</h2>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		      
+			  <div id="drag1" class="dragimage" draggable="true" ondragstart="drag(event)">
+			  	<div style="background-color:#0C9;">Deseo. 15/12/2013</div>
+				<div style="background:#FFF;">desearía que no me mandaran tantas cosas en el cole ...</div>
+			  </div>
+			  
+			  <div id="drag2" class="dragimage" draggable="true" ondragstart="drag(event)">
+			  	<div style="background-color:#0C9;">Cosas que pasan. 15/12/2013</div>
+				<div style="background:#FFF;">El otro día me caí y mi madre me curó, no me dolió mucho pero ...</div>
+			  </div>
+			  
+			  <div id="drag3" class="dragimage" draggable="true" ondragstart="drag(event)">
+			  	<div style="background-color:#CFC;">Soñando. 15/12/2013</div>
+				<div style="background:#FFF;">Soñé que te iba a visitar en verano y que el sol era muy grande...</div>
+			  </div>
+			  
+			  <div id="drag4" class="dragimage" draggable="true" ondragstart="drag(event)">
+			  	<div style="background-color:#FCC;">Foto. 15/12/2013</div>
+				<div style="background:#FFF;">Mi primera tirita
+				<img id="drag1" draggable="true" ondragstart="drag(event)" src="img/paisaje.jpg"  width="100" height="100"></image>
+				</div>
+			  </div>
+			  
+			  
+			 
+</div>
+        <div class="col-sm-2"></div>
+      </div>
+      
+		</div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

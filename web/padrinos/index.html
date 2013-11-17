@@ -52,13 +52,18 @@
   </head>
 
   <body>
-<div style="background-image:url(img/img_2.png); background-repeat:no-repeat; height: 160px; width:100%;"></div>
+<div style="background-image:url(img/img_2.png); background-repeat:no-repeat; height: 160px; width:100%;" onClick="location.href='../index.html'" onMouseOver="this.style.cursor='pointer'"></div>
     <div class="container">
 
-        <h2 class="form-signin-heading"><a href="padrinos/index.html">Padrinos y padrinas</a></h2>
-		
-		 <h2 class="form-signin-heading"><a href="admin/index.html">Técnicos</a></h2>
-        
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Padrinos y padrinas</h2>
+        <input type="text" class="input-block-level" placeholder="usuario">
+        <input type="password" class="input-block-level" placeholder="Contraseña">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> ¿Olvidó la contraseña?
+        </label>
+        <a href="portada.html" class="btn btn-large btn-warning" type="submit">Iniciar Sesión</a>
+      </form>
 
     </div> <!-- /container -->
 
